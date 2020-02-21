@@ -1,3 +1,13 @@
+"""
+    Craig Glassbrenner
+    CS461, Prime Factorization
+
+    Given an integer greater than 1 this program will return a 
+    string representation of what that number equals in terms of 
+    its prime factorization.
+"""
+# Creates the prime factorization dictionary which holds on the info
+# needed to create the string
 def prime_factorization(a):
     factDict = {}
     i=2
@@ -14,6 +24,8 @@ def prime_factorization(a):
         
     return factDict
 
+# Creates the string based on the info based via the prime factorization
+# dicitionary created in the above function.
 def factor_string(b):
     dic = prime_factorization(b)
     keyList = list(dic.keys())
