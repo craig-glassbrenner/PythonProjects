@@ -1,11 +1,23 @@
+""" 
+	Craig Glassbrenner
+	CS461, Markov Text Generator
+
+	Given a text file, this program will generate text based on
+	how much data given in the text file and other command line
+	arguments.
+
+"""
 import sys
 import random
 
+# Opens File and returns contents of file.
 def readFile(filename):
 	f = open(filename, "r")
 	contents = f.read()
 	return contents
 
+# Creates the Dictionary of Prefixes and Suffixes
+# Basically what word comes after a word or series of words.
 def mapDict(c, l):
 	dic = {}
 	words = c.split()
@@ -28,6 +40,8 @@ def mapDict(c, l):
 		i = i + 1
 	return dic
 
+# Based on random choice for the prefix, this function will generate
+# words and sentences based on the following suffixes.
 def produceOutput(dic, l):
 	cont = True
 	toReturn = ""
@@ -70,6 +84,11 @@ def main():
 
 if __name__ == '__main__':
 	main()
+
+
+
+
+
 
 
 
